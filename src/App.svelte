@@ -1,6 +1,11 @@
 <script>
-    import MoviesGrid from "./components/moviesGrid.svelte";
-    import movies from "./assests/movies.json";
+    import NavBar from "./components/navBar.svelte";
+
+    let navBarOptions = {
+        active: 'home',
+        loggedIn: false
+    }
+
 </script>
 
-<MoviesGrid {movies} />
+<NavBar options={navBarOptions}/>
