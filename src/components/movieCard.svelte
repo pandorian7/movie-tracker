@@ -4,13 +4,15 @@
     </script>
 
 
-<div class="card">
-    <div class="bannerBox"><img src="{image}" alt="shougan" class="banner"></div>
-    <div class="infoBox">
-        <a href="{link}" class="title"><strong>{title}</strong> ({year})</a>
-        <br><span class='badge text-bg-warning'>IMDb {rating}</span>
+<a href="{link}">
+    <div class="card">
+        <div class="bannerBox"><img src="{image}" alt="shougan" class="banner"></div>
+        <div class="infoBox">
+            <strong>{title}</strong> ({year})
+            <br><span class='badge text-bg-warning'>IMDb {rating}</span>
+        </div>
     </div>
-</div>
+</a>
 
 <style>
     .card {
