@@ -1,6 +1,9 @@
 <script>
+    
     export let options;
+    const searchModelId = 'searchModel';
     const {active, loggedIn} = options;
+
 </script>
 
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -44,9 +47,12 @@
                     >
                 </li>
             </ul>
-            <ul class="navbar-nav d-flex">
-                <li class="mx-2">
+            <ul class="navbar-nav d-flex" style="gap:5px 0">
+                <li class="mx-2 nav-item">
                     <button class="btn btn-success"
+                    id="search-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#{searchModelId}"
                         ><svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="14"
@@ -92,7 +98,7 @@
                         </div>
                     </li>
                 {:else}
-                    <li class="mx-2">
+                    <li class="nav-item mx-2">
                         <button type="button" class="btn btn-outline-light">
                             Login With <svg
                                 xmlns="http://www.w3.org/2000/svg"
