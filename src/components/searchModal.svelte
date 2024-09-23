@@ -4,7 +4,6 @@
 
   onMount(() => {
     const Model = document.getElementById("searchModel");
-    console.log(Model);
     const searchBox = document.getElementById("searchBox");
     const onShow = () => searchBox.focus();
 

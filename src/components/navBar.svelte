@@ -1,5 +1,7 @@
 <script>
-    
+
+    import SearchHotKey from "./searchHotKey.svelte";
+
     export let options;
     const searchModelId = 'searchModel';
     const {active, loggedIn} = options;
@@ -14,9 +16,6 @@
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
         >
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,15 +25,12 @@
                     <a
                         class="nav-link"
                         class:active={active == "home"}
-                        aria-current="page"
-                        id="nav-link-home"
                         href="/moives">Home</a
                     >
                 </li>
                 <li class="nav-item">
                     <a
                         class="nav-link"
-                        aria-current="page"
                         href="/moives"
                         class:active={active == "movies"}>Movies</a
                     >
@@ -119,6 +115,8 @@
         </div>
     </div>
 </nav>
+
+<SearchHotKey />
 
 <style>
     code#shortcut {
