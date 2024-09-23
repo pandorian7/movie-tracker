@@ -7,10 +7,12 @@
         Nav,
         NavItem,
         NavLink,
+        Button,
     } from "@sveltestrap/sveltestrap";
 
     let isOpen = false;
     export let active;
+    export let loggedIn;
 
     function handleUpdate(event) {
         isOpen = event.detail.isOpen;
@@ -36,5 +38,22 @@
                 >
             </NavItem>
         </Nav>
+        <Nav class="d-flex" navbar>
+            <NavItem>
+                <Button color="success"
+                    ><i class="bi bi-search" style="font-size: 14px;"></i>
+                    Search
+                    <code class="badge text-bg-secondary" id="shortcut"
+                        >Ctrl+K</code
+                    ></Button
+                >
+            </NavItem>
+        </Nav>
     </Collapse>
 </Navbar>
+
+<style>
+    code#shortcut {
+        opacity: 0.7;
+    }
+</style>
