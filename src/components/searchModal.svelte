@@ -23,3 +23,9 @@
     </div>
   </div>
 </div>
+
+<style>
+  #searchModel > .modal-dialog {
+    transition: transform 0.1s ease-out;
+  }
+</style>
